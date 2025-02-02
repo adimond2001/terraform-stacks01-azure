@@ -1,5 +1,5 @@
 component "resource_group" {
-  source = "./modules/resource-group"
+  source = "./resource-group"
 
   inputs = {
     location    = var.location
@@ -12,7 +12,7 @@ component "resource_group" {
 }
 
 component "storage_account" {
-  source = "./modules/storage-account"
+  source = "./storage-account"
 
   inputs = {
     name_suffix    = var.name_suffix
