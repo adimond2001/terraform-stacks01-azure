@@ -21,6 +21,6 @@ component "storage_account" {
 
   providers = {
     azurerm = provider.azurerm.this
-    random = provider.random.this
+    random  = provider.random.this
   }
 }

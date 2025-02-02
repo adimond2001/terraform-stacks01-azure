@@ -1,12 +1,12 @@
 identity_token "azurerm" {
-  audience = [ "api://AzureADTokenExchange" ]
+  audience = ["api://AzureADTokenExchange"]
 }
 
 deployment "dev" {
   inputs = {
-    location       = "uksouth"
-    name_suffix    = "dev"
-    
+    location    = "uksouth"
+    name_suffix = "dev"
+
     identity_token  = identity_token.azurerm.jwt
     client_id       = "09d7c511-4378-42f7-85d0-1994a1bde869"
     subscription_id = "03f3b267-28f2-4d43-aa90-29bec475f445"
@@ -16,9 +16,9 @@ deployment "dev" {
 
 deployment "prod" {
   inputs = {
-    location       = "uksouth"
-    name_suffix    = "prod"
-    
+    location    = "uksouth"
+    name_suffix = "prod"
+
     identity_token  = identity_token.azurerm.jwt
     client_id       = "09d7c511-4378-42f7-85d0-1994a1bde869"
     subscription_id = "c341a77c-49cb-4fb1-ad58-9b9187633433"
@@ -28,9 +28,9 @@ deployment "prod" {
 
 deployment "test" {
   inputs = {
-    location       = "uksouth"
-    name_suffix    = "test"
-    
+    location    = "uksouth"
+    name_suffix = "test"
+
     identity_token  = identity_token.azurerm.jwt
     client_id       = "09d7c511-4378-42f7-85d0-1994a1bde869"
     subscription_id = "cc3b4038-d458-4889-8e97-3e7fa8ad5e64"
