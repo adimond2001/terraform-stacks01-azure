@@ -38,10 +38,10 @@ deployment "test" {
   }
 }
 
-orchestrate "auto_approve" "applyable" {
-  check {
-    condition = context.plan.applyable
-    reason    = "Changes are not applyable"
-  }
-}
+# orchestrate "auto_approve" "applyable" {
+#   check {
+#     condition = context.plan.applyable
+#     reason    = "Changes are not applyable"
+#   }
+# }
 
